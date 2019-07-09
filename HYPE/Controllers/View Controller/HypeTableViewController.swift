@@ -10,8 +10,13 @@ import UIKit
 
 class HypeTableViewController: UITableViewController, UITextFieldDelegate {
 
+    var refresh: UIRefreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        refresh.attributedTitle = NSAttributedString(string: "Loading hype...")
+        refresh.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        self.tableView.addSubview(refresh)
         loadData()
     }
     
@@ -45,10 +50,11 @@ class HypeTableViewController: UITableViewController, UITextFieldDelegate {
         self.present(alertController, animated: true)
     }
     
-    func loadData() {
+    @objc func loadData() {
         HypeController.sharedInstance.fetchDemHypes { (success) in
             if success {
                 DispatchQueue.main.async {
+                    self.refresh.endRefreshing()
                     self.tableView.reloadData()
                 }
             }
