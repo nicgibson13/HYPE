@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		7C631E0922D4F25700333E79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C631E0822D4F25700333E79 /* AppDelegate.swift */; };
-		7C631E0B22D4F25700333E79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C631E0A22D4F25700333E79 /* ViewController.swift */; };
 		7C631E0E22D4F25700333E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C631E0C22D4F25700333E79 /* Main.storyboard */; };
 		7C631E1022D4F25900333E79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C631E0F22D4F25900333E79 /* Assets.xcassets */; };
 		7C631E1322D4F25900333E79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C631E1122D4F25900333E79 /* LaunchScreen.storyboard */; };
+		7C631E1C22D4F7D900333E79 /* HypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C631E1B22D4F7D900333E79 /* HypeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C631E0522D4F25700333E79 /* HYPE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYPE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C631E0822D4F25700333E79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C631E0A22D4F25700333E79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C631E0D22D4F25700333E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C631E0F22D4F25900333E79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C631E1222D4F25900333E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C631E1422D4F25900333E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C631E1B22D4F7D900333E79 /* HypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		7C631E0722D4F25700333E79 /* HYPE */ = {
 			isa = PBXGroup;
 			children = (
-				7C631E0822D4F25700333E79 /* AppDelegate.swift */,
-				7C631E0A22D4F25700333E79 /* ViewController.swift */,
+				7C631E1A22D4F70200333E79 /* Resources */,
 				7C631E0C22D4F25700333E79 /* Main.storyboard */,
+				7C631E1D22D4F7E200333E79 /* Controllers */,
+			);
+			path = HYPE;
+			sourceTree = "<group>";
+		};
+		7C631E1A22D4F70200333E79 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C631E0822D4F25700333E79 /* AppDelegate.swift */,
 				7C631E0F22D4F25900333E79 /* Assets.xcassets */,
 				7C631E1122D4F25900333E79 /* LaunchScreen.storyboard */,
 				7C631E1422D4F25900333E79 /* Info.plist */,
 			);
-			path = HYPE;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7C631E1D22D4F7E200333E79 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C631E1E22D4F7E800333E79 /* View Controller */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7C631E1E22D4F7E800333E79 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C631E1B22D4F7D900333E79 /* HypeTableViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C631E0B22D4F25700333E79 /* ViewController.swift in Sources */,
 				7C631E0922D4F25700333E79 /* AppDelegate.swift in Sources */,
+				7C631E1C22D4F7D900333E79 /* HypeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2HLC2FMZN4;
-				INFOPLIST_FILE = HYPE/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HYPE/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2HLC2FMZN4;
-				INFOPLIST_FILE = HYPE/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HYPE/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
