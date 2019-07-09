@@ -49,7 +49,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="js2-af-UAc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xef-uX-asH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xef-uX-asH">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="lMz-Qm-eDj" id="Cev-Ps-UtJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUo-Es-z6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
